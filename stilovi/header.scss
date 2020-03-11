@@ -1,0 +1,204 @@
+header{
+    background-image: url(../resursi/skyscraper.jpg);
+    @include background;
+    height: 95vh;
+    position: relative;
+    z-index: 1;
+    
+    .naslovsekcije1{
+        height: 100px;
+        z-index: -1;
+        overflow: hidden;
+        border-top: 20px solid white;
+        @include background;
+        position:  absolute;
+        bottom: 0;
+        @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+            height: 50px;
+            border-top: 5px solid white;
+        }
+        .pozadina{
+            background: rgb(255, 230, 0);
+            opacity: .7;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100vw;
+            width: 100%;
+            
+        }
+        h1{
+            font-family: hardcondensed;
+            font-weight: 5rem;
+            color: white;
+            
+            z-index: 2;
+            @media screen and (max-width : 480px){
+                font-size: 3rem;
+            }
+            @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+                font-size: 2rem;
+            }
+        }
+    }
+    .naslov{
+        position: relative;
+        bottom: 150px;
+        align-self: flex-end !important;
+        @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+            transform: scale(.6);
+            bottom: 50px;
+        }
+        h1{
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            font-family: hardcondensed;
+            letter-spacing: 1rem;
+            opacity: .9;
+            @media screen and (max-width : 780px){
+                font-size: 2rem;
+            }
+        }
+        div{
+            font-family: thincondensed;
+            color: #4c4c4c;
+            font-size: 1.5rem;
+            letter-spacing: .7rem;
+            background: rgba(255, 230, 0, 0.808);
+            @media screen and (max-width : 780px){
+                font-size: 1rem;
+                letter-spacing: .5rem;
+            }
+            
+        }
+        span {
+            background-color: rgba(107, 113, 119, 0.761);
+        }
+    }
+    .arrow_down{
+        position: absolute;
+        bottom:110px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+           display: none;
+        }
+        i{
+            color: white;
+            
+        }
+    }
+    .menu_header{
+        height: 50px;
+        background: $menucolor;
+        position: relative;
+        top: 30%;
+        transform: translateY(-50%);
+        @media screen and (max-width : 780px){
+            position: absolute;
+            top: 60px;
+            height: 30px;
+        }
+        @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+            position: absolute;
+            top: 60px;
+            height: 30px;
+        }
+        .dropdown{
+            .btn{
+                background-color: transparent !important;
+                border: 1px solid rgb(56, 56, 56) !important;
+                color: rgb(56, 56, 56) !important;
+            }
+            .btn:active,
+            .btn:focus{
+                box-shadow: none !important;
+                outline: none !important;
+            }
+            @media screen and (min-width : 781px){
+                display: none !important;
+            }
+            .dropdown-menu{
+                
+                width: 350px;
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
+        }
+        ul{
+            @media screen and (max-width : 780px){
+                display: none !important;
+            }
+            li{
+                list-style: none;
+                font-size: 1.2rem;
+                font-weight: 500;
+                user-select: none;
+                cursor: pointer;
+                @include transition;
+                &:hover{
+                    border-bottom: 3px solid black;
+                    padding-bottom: 0 !important;
+                    @include transition;
+                }
+                a{
+                    text-decoration: none;
+                    color: rgb(75, 75, 75);
+                    font-weight: 900;
+                    @media screen and (max-width : 780px){
+                        display: none !important;
+                    }
+                }
+                @media screen and (min-width : 600px) and (max-width : 900px) and (orientation : landscape){
+                    font-size: 1rem;
+                }
+            }
+        }
+        span{
+            position: absolute;
+            &:nth-of-type(1){
+                top: -20px;
+                width: 15vw;
+                left: 0;
+                border-bottom: 20px solid $menucolor;
+                border-left: 15vw solid transparent;
+            }
+            &:nth-of-type(2){
+                top: -20px;
+                width: 65vw;
+                left:15vw;
+                border-bottom: 20px solid $menucolor;
+                border-right: 65vw solid transparent;
+            }
+            &:nth-of-type(3){
+                top: -20px;
+                width: 20vw;
+                left: 80vw;
+                border-bottom: 20px solid $menucolor;
+                border-left: 20vw solid transparent;
+            }
+            &:nth-of-type(4){
+                left: 0;
+                bottom: -20px;
+                width: 15vw;
+                border-top: 20px solid $menucolor;
+                border-right: 15vw solid transparent;
+            }
+            &:nth-of-type(5){
+                bottom: -20px;
+                width: 65vw;
+                left:15vw;
+                border-top: 20px solid $menucolor;
+                border-left: 65vw solid transparent;
+            }
+            &:nth-of-type(6){
+                bottom: -20px;
+                width: 20vw;
+                left: 80vw;
+                border-top: 20px solid $menucolor;
+                border-right: 20vw solid transparent;
+            }
+        }
+    }
+}

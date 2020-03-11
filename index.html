@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html ng-app="ozeblin">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ozeblin d.o.o.</title>
+
+  <meta name="description" content="Osnovna delatnost je izvođenje građevinskih i zanatskih radova. Poslovanje od 25 godina sa preko 300 realizovanih projekata. Pored svega bavi se iznajmljivanjem skele kako bi obezbedili bezbedan i efikasan rad sa najsavremenijom opremom." >
+
+  <meta property="og:title" content="Ozeblin d.o.o.">
+  <meta property="og:description" content="Osnovna delatnost je izvođenje građevinskih i zanatskih radova. Poslovanje od 25 godina sa preko 300 realizovanih projekata. Pored svega bavi se iznajmljivanjem skele kako bi obezbedili bezbedan i efikasan rad sa najsavremenijom opremom.">
+  <meta property="og:image" content="https://www.ozeblin.rs/resursi/logo.png">
+  <meta property="og:url" content="https://www.ozeblin.rs">
+
+  <meta name="twitter:title" content="Ozeblin d.o.o.">
+  <meta name="twitter:description" content="Osnovna delatnost je izvođenje građevinskih i zanatskih radova. Poslovanje od 25 godina sa preko 300 realizovanih projekata. Pored svega bavi se iznajmljivanjem skele kako bi obezbedili bezbedan i efikasan rad sa najsavremenijom opremom.">
+  <meta name="twitter:image" content="https://www.ozeblin.rs/resursi/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="stilovi/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="stilovi/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script src="/app.js"></script>
+
+  <base href="/">
+
+</head>
+<body ng-controller="glavniCtrl">
+  <!-- header -->
+
+  <header class="d-flex justify-content-center align-items-center w-100 my-lg-5 my-0 flex-wrap">
+    <div class="menu_header w-100 d-flex justify-content-center align-items-center ">
+      <ul class="d-flex w-50 justify-content-center align-items-center m-0">
+        <li class="mx-2 mx-0 p-3"><a href ng-click="scrollInto('onama')">O nama</a></li>
+        <li class="mx-2 mx-0 p-3"> <a href ng-click="scrollInto('projekti')">Usluge</a> </li>
+        <li class="mx-2 mx-0 p-3"><a href ng-click="scrollInto('reference')">Reference</a></li>
+        <li class="mx-2 mx-0 p-3"> <a href ng-click="scrollInto('kontakt')">Kontakt</a> </li>
+      </ul>
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </a>
+      
+        <div class="dropdown-menu-center dropdown-menu mt-5" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href ng-click="scrollInto('onama')">O nama</a>
+          <a class="dropdown-item" href ng-click="scrollInto('projekti')">Usluge</a>
+          <a class="dropdown-item" href ng-click="scrollInto('reference')">Reference</a>
+          <a class="dropdown-item" href ng-click="scrollInto('kontakt')">Kontakt</a>
+          
+        </div>
+      </div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="naslov d-flex justify-content-center align-items-center p-3 flex-wrap">
+      <h1 class="w-100 text-center">OZEBLIN doo</h1>
+      <div class="text-center p-2 d-flex align-items-center">građevinsko preduzeće</div>
+      <h2 class="w-100 text-center text-white m-3"><span class=" p-2">Iznajmljivanje skele, montaža-demontaža i izrada projekata</span></h2>
+    </div>
+    <div class="arrow_down"> <a href="#onama" ng-click="scrollInto('onama')"><i class="fas fa-angle-down fa-3x"></i></a> </div>
+    <div class="naslovsekcije1 w-100 d-flex justify-content-center align-items-center" id="onama">
+      <div class="pozadina" ></div>
+      <h1 class="p-3 m-0">O NAMA</h1>
+    </div>
+  </header>
+
+  <!-- content -->
+ 
+  <section class=" d-flex justify-content-center align-items-center w-100 my-2 onama" >
+    <div class="wrapper_onama d-flex justify-content-center align-items-center flex-lg-nowrap flex-wrap">
+      <div class="d-block cols_onama m-2">
+        <div class="img_onama"></div>
+        <div class="txt_onama text-justify py-3">
+          Preduzeće Ozeblin D.O.O. osnovano je 20.12.1995. godine. Osnivač i vlasnik Ozeblina je Ilija Đukić. Osnovna delatnost firme je izvođenje građevinskih i zanatskih radova. Uspešno poslujemo na tržištu već 25 godina i ima preko 300 realizovanih projekata u oblasti građevinarstva. Naša firma pored svoje osnovne delatnosti bavi se iznajmljivanjem skele kako bi obezbedili bezbedan i efikasan rad sa najsavremenijom opremom.
+        </div>
+      </div>
+      <div class="d-block cols_onama m-2">
+        <div class="txt_onama text-justify py-3">Nudimo ramovsku fasadnu skelu proizvođača, SLV group, koji zadovoljavaju sve najviše standarde. Zahvaljujući dugogodišnjem radnom iskustvu u oblasti građevinarstva možemo garantovati bezbedan i uspešan rad. Ozeblin D.O.O. kontinuirano radi na unapređivanju svog poslovanja što pokazuju sertifikati ISO 9001, ISO 14001, ISO 18001, ISO 27001, ISO 50001. Time je obezbeđen kvalitetan menadžment preduzeća i implementacija sertifikata.</div>
+        <div class="img_onama"></div>
+      </div>
+      <div class="d-block cols_onama m-2">
+        <div class="img_onama"></div>
+        <div class="txt_onama text-justify py-3">Implementirani sertifikati:<br>- sistem menadžmenta zaštite životne sredine - ISO 14001<br>- sistem menadžmenta zaštite zdravlja i bezbednosti na radu - DHSAD 18001<br>- sistem menadžmenta bezbednosti informacija - ISO 27001<br>- sistem menadžmenta energije - ISO 50001</div>
+      </div>
+    </div>
+  </section>
+  <section class="d-flex justify-content-center align-items-center w-100 my-2 reference flex-wrap h-100 py-lg-5 py-3">
+    <div class="naslov_reference d-flex justify-content-center align-items-center w-100" id="reference">
+      <div class="pozadina" ></div>
+      <h3 class="m-0">IZNAJMLJIVANJE SKELA</h3>
+    </div>
+    <div class="h-auto">
+        <div class="col-lg-11 col-12 mx-auto mt-lg-5 mt-3">
+            <div class="row row-eq-height">
+                <div class="col-lg-6 col-12 m-0 p-2" ng-init="hovTwo = 'ramovska1.jpg'">
+                    <div class="col-12 m-0 p-2">
+                      <img class="w-100" ng-src="/resursi/{{hovTwo}}" alt="">
+                    </div>
+                    <div class="col-12 m-0 row">
+                        <div class="col-lg-4 col-12 p-2">
+                          <img class="w-100" ng-src="/resursi/ramovska2.jpg" alt="" ng-mouseover="hovTwo = 'ramovska2.jpg'"  ng-mouseleave="hovTwo = 'ramovska1.jpg'" >
+                        </div>
+                        <div class="col-lg-4 col-12 p-2">
+                          <img class="w-100" ng-src="/resursi/ramovska3.jpg" alt="" ng-mouseover="hovTwo = 'ramovska3.jpg'"  ng-mouseleave="hovTwo = 'ramovska1.jpg'" >
+                        </div>
+                        <div class="col-lg-4 col-12 p-2">
+                          <img class="w-100" ng-src="/resursi/ramovska4.jpg" alt="" ng-mouseover="hovTwo = 'ramovska4.jpg'"  ng-mouseleave="hovTwo = 'ramovska1.jpg'" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 m-0 d-flex align-items-center">
+                  <div>
+                    <h2 class="font-weight-normal">Ramovske-fasadne skelle</h2>
+                    <h3 class="font-weight-normal">(SLV group)</h3>
+                    <hr>
+                    <p class="text-secondary">
+                      Brzomontažne ramovske sekele odlikuje:
+                      <ul class="text-secondary">
+                        <li>bezbedno obavljanje radova</li>
+                        <li>brza montaža/demontaža</li>
+                        <li>stabilnost i konstrukcije </li>
+                      </ul>
+                    </p>
+                    <p class="text-secondary">
+                      Dimnezija polja: <span class="text-dark">1,57; 2,57; 3,07</span>
+                    </p>
+                    <p class="text-secondary">
+                      Širina rama: <span class="text-dark">0,73m</span>
+                    </p>
+                    <p class="text-secondary">
+                      Visina rama: <span class="text-dark">2,00m</span>
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-11 col-12 mx-auto mt-lg-5 mt-3">
+          <div class="row row-eq-height">
+              <div class="col-lg-6 col-12 m-0 d-flex align-items-center justify-content-end">
+                <div class="mr-5">
+                  <h2 class="font-weight-normal text-right"></h2> <!-- Ovde ukucati ime vrste sekela -->
+                  <h3 class="font-weight-normal text-right">Dimenzije</h3>
+                  <hr>
+                  <p class="text-secondary">
+                    Dimnezija polja: <span class="text-dark">1,80m</span>
+                  </p>
+                  <p class="text-secondary">
+                    Širina rama: <span class="text-dark">1,05m</span>
+                  </p>
+                  <p class="text-secondary">
+                    Visina rama: <span class="text-dark">2,00m</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12 m-0 p-2" ng-init="hovOne = 'slika4.jpg'">
+                  <div class="col-12 m-0 p-2">
+                    <img class="w-100" ng-src="/resursi/{{hovOne}}" alt="">
+                  </div>
+                  <div class="col-12 m-0 row">
+                      <div class="col-lg-4 col-12 p-2" ng-mouseover="hovOne = 'slika1.jpg'"  ng-mouseleave="hovOne = 'slika4.jpg'" >
+                        <img class="w-100" src="/resursi/slika1.jpg" alt="">
+                      </div>
+                      <div class="col-lg-4 col-12 p-2"ng-mouseover="hovOne = 'slika2.jpg'" ng-mouseleave="hovOne = 'slika4.jpg'" >
+                        <img class="w-100" src="/resursi/slika2.jpg" alt="">
+                      </div>
+                      <div class="col-lg-4 col-12 p-2" ng-mouseover="hovOne = 'slika3.jpg'" ng-mouseleave="hovOne = 'slika4.jpg'" >
+                        <img class="w-100" src="/resursi/slika3.jpg" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class=" d-flex justify-content-center align-items-center w-100 my-2 projekti flex-wrap">
+    <div class="naslov_projekti d-flex justify-content-center align-items-center w-100" id="projekti">
+      <div class="pozadina" ></div>
+      <h3 class="m-0">USLUGE</h3>
+    </div>
+    <div class="wrapper_projekti">
+      <div class="grid1 cells_grid d-flex justify-content-center align-items-center">
+        <!-- <div class="cell_grid--area"></div> -->
+      </div>
+      <div class="grid2 cells_grid d-flex justify-content-center align-items-end flex-wrap">
+        <div>
+          <h3 class="m-0 p-0 text-center">Grubi radovi</h3>
+          <p>- Rušenje i razbijanje objekata; zemljani radovi<br>- Zidarski, armiračko betonski</p>
+        </div>
+      </div>
+      <div class="grid3 cells_grid"></div>
+      <div class="grid4 cells_grid"></div>
+      <div class="grid5 cells_grid">
+        
+      </div>
+      <div class="grid6 cells_grid">
+       
+      </div>
+      <div class="grid7 cells_grid d-flex justify-content-center align-items-end flex-wrap">
+        <div>
+          <h3 class="m-0 p-0 text-center">Unutrašnji radovi</h3>
+          <p>- Malterisanje <br>- Ugradnja stolarije <br>- Postavljanje podnih i zidnih obloga <br>- Bojenje i zastakljivanje <br>- Ostali završni radovi</p>
+        </div>
+      </div>
+      <div class="grid8 cells_grid d-flex justify-content-center align-items-center">
+        <!-- <div class="cell_grid--area"></div> -->
+      </div>
+      <div class="grid9 cells_grid  d-flex justify-content-center align-items-end flex-wrap">
+        <div>
+          <h3 class="m-0 p-0 text-center">Montaža</h3>
+          <p>- Montaža krovnih konstrukcija i pokrivanje krovova<br>- Postavljanje električnih instalacija i opreme<br>- Postavljanje cevnih instalacija <br>-Ostali instalacioni radovi</p>
+        </div>
+      </div>
+      <div class="grid10 cells_grid">
+      </div>
+    </div>
+  </section>
+  <section class=" d-flex justify-content-center align-items-center w-100 my-2 reference flex-wrap">
+    <div class="naslov_reference d-flex justify-content-center align-items-center w-100" id="reference">
+      <div class="pozadina" ></div>
+      <h3 class="m-0">REFERENCE</h3>
+    </div>
+    <div class="heksogrami">
+      <ul class="honeycomb">
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref6.jpg">
+          <div class="honeycomb-cell__title">Investiciono održavanje predškolske ustanove<small>"Boško Buha" - Beška</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref7.jpg">
+          <div class="honeycomb-cell__title">Radovi na energetskoj adaptaciji objekta škole<small>"Šinković Jožef" - Bačka Topola</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref8.jpg">
+          <div class="honeycomb-cell__title">Sanacija i adaptacija objekta i instalacija<small>OŠ "Petefi Šandor" - Nova Crnja</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref9.jpg">
+          <div class="honeycomb-cell__title">Rekonstrukcija herbarijumskog depoa<small>PMF - Novi Sad</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/construction-1921518_960_720.webp">
+          <div class="honeycomb-cell__title">Izgradnja spoljne hidranstke mreće oko objekta<small>Pedagoški fakultet - Sombor</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref11.jpg">
+          <div class="honeycomb-cell__title">Izvođenje radova energetske sanacija i adaptacije objekta dečijeg dispanzera i ginekologije<small>Dom Zdravlja - Odžaci</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref1.jpg">
+          <div class="honeycomb-cell__title">Izvođenje radova termoizolacije objekta<small>OŠ "Stari Kovač Đula" - Stara Moravica</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref2.jpg">
+          <div class="honeycomb-cell__title">Izvođenje radova na sanaciji fasade zgrade<small>Osnovni sud - Bačka Topola</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref3.jpg">
+          <div class="honeycomb-cell__title">Izvođenje radova na adaptaciji šalter sale<small>EPS distribucija - poslovina Odžaci</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref4.jpg">
+          <div class="honeycomb-cell__title">Adaptacija poslovnog prostora<small>ŠG "Novi Sad" - Novi Sad</small></div>
+        </li>
+        <li class="honeycomb-cell">
+          <img class="honeycomb-cell__image" src="/resursi/reference/ref5.jpg">
+          <div class="honeycomb-cell__title">Izvođenje građevinsko-zanatskih radova<small>Poljoprivredna škola - Futog</small></div>
+        </li>
+        <li class="honeycomb-cell honeycomb__placeholder"></li>
+      </ul>
+    </div>
+  </section>
+  <section class=" d-flex justify-content-center align-items-center w-100 my-2 kontaktiraj flex-wrap">
+    <div class="naslov_kontaktiraj d-flex justify-content-center align-items-center w-100" id="kontakt">
+      <div class="pozadina" ></div>
+      <h3 class="m-0">KONTAKTIRAJ NAS</h3>
+    </div>
+    <div class="">
+      <form class="contact-form row">
+        <div class="form-field col-12">
+           <input id="email" class="input-text js-input" type="email" required ng-model="kont.mejl">
+           <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field col-12">
+           <textarea id="message" class="input-text js-input border border-dark h-auto" rows="5" placeholder="Poruka..." type="text" required ng-model="kont.poruka"></textarea>
+        </div>
+        <div class="form-field col x-100 align-center">
+           <input class="submit-btn" type="submit" value="Submit" ng-click="posaljiMejl(kont)">
+        </div>
+     </form>
+    </div>
+  </section>
+  <footer class="foot darker position-relative">
+    <div class="content h-100 position-relative">
+        <div class="w-100 mx-0 px-5 d-lg-inline-flex row no-gutters justify-content-end align-items-center h-100">
+            <div class="contact-info mx-3">
+                <h6><i class="fas fa-map-marker-alt fa-big mr-2 text-danger"></i> 7 Milivoja Živanovića, <br> 21203, Veternik</h6>
+                <h6><i class="fas fa-phone-volume fa-big mr-2 text-info"></i> (+381) 21 64 96 873</h6>
+                <h6><i class="fas fa-envelope-open-text fa-big mr-2 text-warning"></i> ozeblin@mts.rs</h6>
+                <h6><i class="fas fa-envelope-open-text fa-big mr-2 text-warning"></i> ilija@ozeblin.rs</h6>
+            </div>
+            <iframe class="mapsize" class="d-lg-inline-block px-2" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11236.583930091356!2d19.7807368!3d45.2448407!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5124e54011fbe4bb!2sOzeblin!5e0!3m2!1sen!2srs!4v1577999242569!5m2!1sen!2srs" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <div class="h-auto darker w-100 mx-0 px-0">
+        <div class="zeleno w-100"></div>
+        <p class="pb-lg-3 text-center text-white foot-text">&copy; Copyright 2020, Ozeblin</p>
+    </div>
+  </footer>
+
+  <script>
+    $( '.js-input' ).keyup(function() {
+      if( $(this).val() ) {
+        $(this).addClass('not-empty');
+      } else {
+        $(this).removeClass('not-empty');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
+

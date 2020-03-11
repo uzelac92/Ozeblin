@@ -1,0 +1,50 @@
+@mixin background{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin transition {
+    transition: .3s ease;
+}
+@font-face{
+    font-family: 'thincondensed';
+    src: url(../resursi/ExoCondensed/Exo2-LightCondensed.otf) format('opentype'); 
+}
+@font-face{
+    font-family: 'hardcondensed';
+    src: url(../resursi/ExoCondensed/Exo2-ExtraBoldCondensed.otf) format('opentype'); 
+}
+$menucolor : rgba(255, 255, 255, 0.788);
+$gridbackground : rgba(0, 0, 0, 0.664);
+$hexagon-width: 250px;
+$hexagon-height: $hexagon-width*.55;
+$hexagon-margin: 25px;
+$hexagon-title-color: #fff;
+$hexagon-border-color: #fff;
+$hexagon-border-color--hover: #ECDC5E;
+$hexagon-image-color: #222222;
+$honeycomb-max-width: 1200px;
+$viewport-thereshold: $hexagon-width + $hexagon-margin;
+
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@import "header";
+@import "section1";
+@import "section2";
+@import "reference";
+@import "contact";
+@import "footer";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+@import url("https://fonts.googleapis.com/css?family=Lusitana:400,700");
+

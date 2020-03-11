@@ -1,0 +1,65 @@
+.foot {
+  height: 400px;
+  background: url("../resursi/scaffolding.png") no-repeat left;
+  background-size: 16%;
+}
+
+.zeleno {
+  background: #fdee1d;
+  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fdee1d), to(#fcb345));
+  background: linear-gradient(90deg, #fdee1d 75%, #fcb345 100%);
+  height: 1vh;
+  z-index: 0;
+}
+
+.darker {
+  background-color: #202020;
+}
+
+.fa-big {
+  font-size: 2.4rem;
+}
+
+.mapsize {
+  width: 350px;
+  height: 300px;
+}
+
+.contact-info h6 {
+  color: white;
+  margin: 40px 10px;
+}
+
+.contact-info {
+  border-right: 3px solid #fdee1d;
+}
+
+.meni-item {
+  border-bottom: 2px solid #fdee1d;
+}
+
+@media screen and (max-width: 768px) {
+  .mapsize {
+    width: 250px;
+    height: 200px;
+  }
+  .foot {
+    height: 100%;
+    background-image: none;
+  }
+  .contact-info {
+    border-right: none;
+    margin: auto !important;
+  }
+  .contact-info h6 {
+    margin: 20px 0 !important;
+  }
+  .zeleno {
+    display: none;
+  }
+  .foot-text {
+    margin: 5px;
+    border-top: 2px solid #fdee1d;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
